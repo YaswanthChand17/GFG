@@ -1,0 +1,14 @@
+class Solution:    
+    def binarysearch(self, arr, n, k):
+        l=0
+        h=n-1;
+        while l<=h:
+            mid=int((l+h)/2)
+            if arr[mid]==k:
+                return mid
+            elif arr[mid]<k:
+                l=mid+1
+            else:
+                h=mid-1
+                
+        return -1
